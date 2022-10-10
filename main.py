@@ -10,8 +10,9 @@ n1 = random.randint(p,g)
 n1= int(n1)
 #print(n1)
 
-#P1: Captar un numero
+#definimos una función que cuente los intentos
 def intentos(n1): 
+  #Definimos una función que comparara el numero dado 
   def adivina_numero(n1):
       #Definimos el numero de intentos iniciales a 0
      intento = 0
@@ -42,7 +43,9 @@ def intentos(n1):
               else: 
                 break
      
-                sys.exit()    
+                sys.exit()  
+                
+      #condicional para mostrar los intentos finales y el fin de partida          
      if n1==n2:
        intento = str(intento)
        print("Has ganado")
