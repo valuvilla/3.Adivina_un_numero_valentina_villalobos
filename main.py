@@ -54,7 +54,8 @@ def intentos(n1):
     
   
   print(adivina_numero(n1))
-  
+
+  #Para que se ejecute el código
 if __name__ == "__main__":
   intentos(n1)
         
