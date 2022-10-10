@@ -9,7 +9,6 @@ print(n1)
 
 #P1: Captar un numero
 def intentos(n1): 
-  intento = 0
   def adivina_numero(n1):
      intento = 0
      while True:
