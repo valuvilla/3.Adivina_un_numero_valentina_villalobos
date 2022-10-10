@@ -1,28 +1,36 @@
 import random
 import sys
 
+print("Define los limites")
+p=int(input('¿Cuál es el número más pequeño del intervalo?: '))
 
+g=int(input('¿Cuál es el número más grande del intervalo? '))
 
-n1 = random.randint(0,100)
+n1 = random.randint(p,g)
 n1= int(n1)
-print(n1)
+#print(n1)
 
 #P1: Captar un numero
 def intentos(n1): 
   def adivina_numero(n1):
+      #Definimos el numero de intentos iniciales a 0
      intento = 0
      while True:
       #Creamos un bucle infinito
-        n2=input("Introduce un número entero entre 0 y 99: ")
+
+       #Pedimos por teclado un número
+        n2=input("Introduce un número entero entre" + str(p) + " y " + str(g) + ": ")
        
+       #Cada vez que entre en un bucle se sumara un intento
         intento = intento + 1
        
+       #Controlamos las excepciones, en este caso cualquier resultado que no sea un numero o que sea un numero no comprendido en el intervalo dado
         try:
             n2 = int(n2)
         except:
             pass
         else:
-            if 0<=n2<=100:
+            if p<=n2<=g:
               if int(n2)<n1:
                 print("demasiado pequeño")
 
