@@ -2,10 +2,10 @@ import random
 import sys
 
 print("Define los limites", "\n")
-MIN=int(input('¿Cuál es el número más pequeño del intervalo?: '))
-MAX=int(input('¿Cuál es el número más grande del intervalo? '))
+minimo=int(input('¿Cuál es el número más pequeño del intervalo?: '))
+maximo=int(input('¿Cuál es el número más grande del intervalo? '))
 
-n1 = random.randint(p,g)
+n1 = random.randint(minimo, maximo)
 n1= int(n1)
 #print(n1)
 
@@ -19,7 +19,7 @@ def intentos(n1):
       #Creamos un bucle infinito
 
        #Pedimos por teclado un número
-        n2=input("Introduce un número entero entre " + str(MIN) + " y " + str(MAX) + ": ")
+        n2=input("Introduce un número entero entre " + str(minimo) + " y " + str(maximo) + ": ")
         
        
        #Cada vez que entre en un bucle se sumara un intento
@@ -31,7 +31,7 @@ def intentos(n1):
         except:
             pass
         else:
-            if MIN<=n2<=MAX:
+            if minimo<=n2<=maximo:
               if int(n2)<n1:
                 print("demasiado pequeño", "\n")
 
