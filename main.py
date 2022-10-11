@@ -2,8 +2,8 @@ import random
 import sys
 
 print("Define los limites", "\n")
-p=int(input('¿Cuál es el número más pequeño del intervalo?: '))
-g=int(input('¿Cuál es el número más grande del intervalo? '))
+MIN=int(input('¿Cuál es el número más pequeño del intervalo?: '))
+MAX=int(input('¿Cuál es el número más grande del intervalo? '))
 
 n1 = random.randint(p,g)
 n1= int(n1)
@@ -19,7 +19,7 @@ def intentos(n1):
       #Creamos un bucle infinito
 
        #Pedimos por teclado un número
-        n2=input("Introduce un número entero entre " + str(p) + " y " + str(g) + ": ")
+        n2=input("Introduce un número entero entre " + str(MIN) + " y " + str(MAX) + ": ")
         
        
        #Cada vez que entre en un bucle se sumara un intento
@@ -31,7 +31,7 @@ def intentos(n1):
         except:
             pass
         else:
-            if p<=n2<=g:
+            if MIN<=n2<=MAX:
               if int(n2)<n1:
                 print("demasiado pequeño", "\n")
 
@@ -48,10 +48,10 @@ def intentos(n1):
       #condicional para mostrar los intentos finales y el fin de partida          
      if n1==n2:
        intento = str(intento)
-       print("Has ganado" + "\n" + "¡Has adivinado el número en ' + intento + ' intento/s!"+ "\n"+ "FIN DE PARTIDA" )
+       print("Has ganado" + "\n" + "¡Has adivinado el número en " + intento + " intento/s!"+ "\n"+ "FIN DE PARTIDA" )
     
   
-  adivina_numero(n1)
+  return adivina_numero(n1)
 
   #Para que se ejecute el código
 if __name__ == "__main__":
