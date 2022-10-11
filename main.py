@@ -2,8 +2,11 @@ import random
 import sys
 
 print("Define los limites", "\n")
-minimo=int(input('¿Cuál es el número más pequeño del intervalo?: '))
-maximo=int(input('¿Cuál es el número más grande del intervalo? '))
+MIN=int(input('¿Cuál es el número más pequeño del intervalo?: '))
+MAX=int(input('¿Cuál es el número más grande del intervalo? '))
+
+minimo=MIN
+maximo=MAX
 
 n1 = random.randint(minimo, maximo)
 n1= int(n1)
