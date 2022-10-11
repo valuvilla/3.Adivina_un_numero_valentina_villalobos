@@ -1,11 +1,10 @@
 import random
 import sys
 
-print("Define los limites")
-print("\n")
+print("Define los limites", "\n")
 p=int(input('¿Cuál es el número más pequeño del intervalo?: '))
 g=int(input('¿Cuál es el número más grande del intervalo? '))
-print("\n")
+
 n1 = random.randint(p,g)
 n1= int(n1)
 #print(n1)
@@ -34,13 +33,11 @@ def intentos(n1):
         else:
             if p<=n2<=g:
               if int(n2)<n1:
-                print("demasiado pequeño")
-                print("\n")
+                print("demasiado pequeño", "\n")
 
                 
               elif int(n2)>n1:
-               print("demasiado grande")
-               print("\n")
+               print("demasiado grande", "\n")
 
                 
               else: 
@@ -51,10 +48,7 @@ def intentos(n1):
       #condicional para mostrar los intentos finales y el fin de partida          
      if n1==n2:
        intento = str(intento)
-       print("Has ganado")
-       print( '¡Has adivinado el número en ' + intento + ' intento/s!')
-       print("FIN DE PARTIDA")
-       print("\n")
+       print("Has ganado" + "\n" + "¡Has adivinado el número en ' + intento + ' intento/s!"+ "\n"+ "FIN DE PARTIDA" )
     
   
   adivina_numero(n1)
