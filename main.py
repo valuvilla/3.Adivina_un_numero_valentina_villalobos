@@ -8,21 +8,21 @@ MAX=int(input('¿Cuál es el número más grande del intervalo? '))
 minimo=MIN
 maximo=MAX
 
-n1 = random.randint(minimo, maximo)
-n1= int(n1)
+numero = random.randint(minimo, maximo)
+numero= int(numero)
 #print(n1)
 
 #definimos una función que cuente los intentos
-def intentos(n1): 
+def intentos(numero): 
   #Definimos una función que comparara el numero dado 
-  def adivina_numero(n1):
+  def adivina_numero(numero):
       #Definimos el numero de intentos iniciales a 0
      intento = 0
      while True:
       #Creamos un bucle infinito
 
        #Pedimos por teclado un número
-        n2=input("Introduce un número entero entre " + str(minimo) + " y " + str(maximo) + ": ")
+        intent=input("Intenta adivinar un número entero entre " + str(minimo) + " y " + str(maximo) + ": ")
         
        
        #Cada vez que entre en un bucle se sumara un intento
@@ -30,16 +30,17 @@ def intentos(n1):
        
        #Controlamos las excepciones, en este caso cualquier resultado que no sea un numero o que sea un numero no comprendido en el intervalo dado
         try:
-            n2 = int(n2)
+            intent = int(intent)
         except:
+            print("Elemento no válido", file=sys.stderr)
             pass
         else:
-            if minimo<=n2<=maximo:
-              if int(n2)<n1:
+            if minimo<=intent<=maximo:
+              if int(intent)<numero:
                 print("demasiado pequeño", "\n")
 
                 
-              elif int(n2)>n1:
+              elif int(intent)>numero:
                print("demasiado grande", "\n")
 
                 
@@ -49,12 +50,12 @@ def intentos(n1):
                 sys.exit()  
                 
       #condicional para mostrar los intentos finales y el fin de partida          
-     if n1==n2:
+     if numero==intent:
        intento = str(intento)
        print("Has ganado" + "\n" + "¡Has adivinado el número en " + intento + " intento/s!"+ "\n"+ "FIN DE PARTIDA" )
     
   
-  return adivina_numero(n1)
+  return adivina_numero(numero)
 
   #Para que se ejecute el código
 if __name__ == "__main__":
