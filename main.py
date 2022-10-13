@@ -4,6 +4,7 @@ import sys
 print("Define los limites", "\n")
 MIN=int(input('¿Cuál es el número más pequeño del intervalo?: '))
 MAX=int(input('¿Cuál es el número más grande del intervalo? '))
+#syspath
 
 minimo=MIN
 maximo=MAX
