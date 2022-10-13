@@ -1,27 +1,36 @@
 import sys
 
-
-maximo=MAX
-minimo=MIN
-
-def limites():
+def limite_inf():
     while True:
-        print("Define los limites", "\n")
-
         minimo=input('¿Cuál es el número más pequeño del intervalo?: ')
-        maximo=input('¿Cuál es el número más grande del intervalo? ')
-
         try:
-            minimo=int(minimo)
-            maximo=int(maximo)
+             minimo=int(minimo)
         except:
             print("Tiene que ser un número")
-            pass
+            pass 
         else:
-            if int(minimo)<int(maximo):
+            if int(minimo)>0:
                 break
         sys.exit()
-        
-    return maximo, minimo     
+    return minimo
+
+def limite_sup():
+    while True:
+        maximo=input('¿Cuál es el número más grande del intervalo?: ')
+        try:
+             minimo=int(minimo)
+        except:
+            print("Tiene que ser un número")
+            pass 
+        else:
+            if int(maximo)>int(minimo):
+                break
+        sys.exit()
+    return minimo
+
+def limites():
+    print("Define los limites")
+    
+    
 
 
