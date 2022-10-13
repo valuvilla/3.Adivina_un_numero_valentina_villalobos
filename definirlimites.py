@@ -1,14 +1,15 @@
 
 import sys
 
-#from limitesuperior import limite_sup
+from limitesuperior import limite_sup
+limite_sup()
 
-#from limitesinferior import limite_inf
+from limitesinferior import limite_inf
+limite_inf()
 
+def definir_limites(minimo,maximo):
 
-#def definir_limites(minimo, maximo):
-'''
-while True:
+    while True:
         print("Definir limites")
         limite_inf(minimo)
         limite_sup(maximo)
@@ -21,5 +22,7 @@ while True:
         sys.exit()
 
     return maximo, minimo
-    '''
+
+print(definir_limites(minimo,maximo))
+
 

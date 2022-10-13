@@ -2,8 +2,9 @@
 import sys
 
 from definirlimites import minimo, maximo
+minimo, maximo
 
-invitacion=print("Hola")
+print("Hola")
 
 def pedir_numero(invitacion):
 
