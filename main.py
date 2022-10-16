@@ -17,13 +17,15 @@ nombre=''
 def usuario(nombre):
     nombre=input("Usuario: ")
     print("hola {}, quiere juegar?".format(nombre))
-    respuesta=input("A.Si o B.No")
-    print("\n")
+    print("A.Si o B.No ")
+    respuesta=input()
     for letra in respuesta:
-      if letra=="a" or "A" or "si" or "Si":
-        return intentos(numero)
+      if letra == "a" or letra== "A" or letra=="si" or letra=="Si" == True:
+        print(intentos(numero))
       else:
-        return ("HASTA LA PROXIMA, {}".format(nombre))
+        print("")  
+
+
   
     return nombre
 
