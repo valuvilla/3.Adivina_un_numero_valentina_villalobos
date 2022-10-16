@@ -19,11 +19,21 @@ def usuario(nombre):
     nombre=input("Usuario: ")
     print("hola {}, quiere juegar?".format(nombre))
     print("A.Si o B.No ")
+
     respuesta=input()
+
     for letra in respuesta:
       if letra == "a" or  "A" or "si" or "Si":
         return intentos(numero)
-    return nombre
+      if letra== 'b' or 'B' or 'no' or 'No':
+        return "Hasta luego, {}".format(nombre) 
+
+    def tabla(jugador):
+        jugador.append((nombre, intentos))
+        return jugador
+    
+
+    print((jugador))
 
 #definimos una función que cuente los intentos
 def intentos(numero): 
@@ -66,18 +76,11 @@ def intentos(numero):
      if numero==intent:
        intento = str(intento)
        print("Has ganado")
-       print(nombre, "has adivinado el número en {} intento/s!".format(intento))
+       print("has adivinado el número en {} intento/s!".format(intento))
       
   
   return adivina_numero(numero)
 
-def tabla(jugador):
-  while usuario(nombre):
-    jugador.append(nombre, intentos)
-  return jugador  
-
-
-print(tabla(jugador))
 
 
   #Para que se ejecute el código
