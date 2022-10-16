@@ -13,20 +13,16 @@ numero = random.randint(minimo, maximo)
 
 print(numero)
 
-nombre=''
+jugador=[]
+
 def usuario(nombre):
     nombre=input("Usuario: ")
     print("hola {}, quiere juegar?".format(nombre))
     print("A.Si o B.No ")
     respuesta=input()
     for letra in respuesta:
-      if letra == "a" or letra== "A" or letra=="si" or letra=="Si" == True:
-        print(intentos(numero))
-      else:
-        print("")  
-
-
-  
+      if letra == "a" or  "A" or "si" or "Si":
+        return intentos(numero)
     return nombre
 
 #definimos una función que cuente los intentos
@@ -69,12 +65,22 @@ def intentos(numero):
       #condicional para mostrar los intentos finales y el fin de partida          
      if numero==intent:
        intento = str(intento)
-       print("Has ganado" + "\n" + "¡Has adivinado el número en " + intento + " intento/s!"+ "\n"+ "FIN DE PARTIDA" )
-    
+       print("Has ganado")
+       print(nombre, "has adivinado el número en {} intento/s!".format(intento))
+      
   
   return adivina_numero(numero)
 
+def tabla(jugador):
+  while usuario(nombre):
+    jugador.append(nombre, intentos)
+  return jugador  
+
+
+print(tabla(jugador))
+
+
   #Para que se ejecute el código
 if __name__ == "__main__":
-  usuario(nombre)
+  usuario(jugador)
         
