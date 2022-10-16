@@ -2,7 +2,7 @@ import sys
 
 
 
-def limite_inf():
+"""def limite_inf():
     while True:
         minimo=input('¿Cuál es el número más pequeño del intervalo?: ')
         try:
@@ -15,4 +15,4 @@ def limite_inf():
                 break
         sys.exit()
     return minimo
-
+"""
