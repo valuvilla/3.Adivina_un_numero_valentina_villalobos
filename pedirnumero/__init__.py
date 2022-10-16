@@ -4,3 +4,7 @@ from .pedir_num import(
   sys,
   solicitar_intento 
 )
+from .siono import(
+  desea_jugar,
+  sys
+)
