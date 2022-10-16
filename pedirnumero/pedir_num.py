@@ -1,6 +1,6 @@
 import sys
 
-from limites import MAX1, MIN1
+from limites.limites import MIN1, MAX1
 
 
 def pedir_numero(valor):

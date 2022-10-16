@@ -1,14 +1,15 @@
 
 import random
 
-from limites import MAX1, MIN1
-from pedirnu
+from limites.limites import (MAX1, MIN1)
+from pedirnumero.pedir_num import solicitar_intento
+
 
 def adivina_numero(intento, minimo=MIN1, maximo=MAX1):
     numero=random.randit(minimo, maximo)
     n_intentos=0
     while intento!=numero:
-        pedir_num.solicitar_intento(intento)
+        solicitar_intento(intento)
         n_intentos+=1
         if intento<numero:
             print("demasiado pequeño", "\n")
