@@ -20,13 +20,16 @@ def solicitar_intento(valor, minimo=MIN1, maximo=MAX1):
     while True:
         invitacion= "{} entre {} y {} incluídos".format(invitacion, minimo, maximo)
         print(invitacion)
-        intento= pedir_numero(valor)
+        dato= pedir_numero(valor)
         try:
-            minimo<=intento<=maximo
+            minimo<=dato<=maximo
         except:
-            print("{} no está entre {} y {}".format(intento,minimo,maximo ))
+            print("{} no está entre {} y {}".format(dato,minimo,maximo ))
             pass
-        else: 
+        else:
+            break 
             sys.exit()
+    
+    return dato            
             
 print(solicitar_intento(minimo=MIN1, maximo=MAX1)) 
