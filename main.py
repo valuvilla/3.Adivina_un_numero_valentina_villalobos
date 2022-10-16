@@ -1,17 +1,31 @@
+
 import random
 import sys
 
-print("Define los limites", "\n")
-MIN=int(input('¿Cuál es el número más pequeño del intervalo?: '))
-MAX=int(input('¿Cuál es el número más grande del intervalo? '))
-#syspath
+MIN=0
+MAX=100
+
 
 minimo=MIN
 maximo=MAX
 
 numero = random.randint(minimo, maximo)
-numero= int(numero)
-#print(n1)
+
+print(numero)
+
+nombre=''
+def usuario(nombre):
+    nombre=input("Usuario: ")
+    print("hola {}, quiere juegar?".format(nombre))
+    respuesta=input("A.Si o B.No")
+    print("\n")
+    for letra in respuesta:
+      if letra=="a" or "A" or "si" or "Si":
+        return intentos(numero)
+      else:
+        return ("HASTA LA PROXIMA, {}".format(nombre))
+  
+    return nombre
 
 #definimos una función que cuente los intentos
 def intentos(numero): 
@@ -23,7 +37,7 @@ def intentos(numero):
       #Creamos un bucle infinito
 
        #Pedimos por teclado un número
-        intent=input("Intenta adivinar un número entero entre " + str(minimo) + " y " + str(maximo) + ": ")
+        intent=input("Intenta adivinar un número entero entre {} y {}: ".format(minimo, maximo))
         
        
        #Cada vez que entre en un bucle se sumara un intento
@@ -60,5 +74,5 @@ def intentos(numero):
 
   #Para que se ejecute el código
 if __name__ == "__main__":
-  intentos(n1)
+  usuario(nombre)
         
