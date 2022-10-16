@@ -1,9 +1,0 @@
-MIN1=0
-MAX1=100
-
-MAX2=1000
-MAX3=10**6
-MAX4=10**12
-
-minimo=MIN1
-maximo=MAX1

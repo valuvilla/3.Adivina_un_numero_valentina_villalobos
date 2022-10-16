@@ -2,11 +2,10 @@
 
 import random
 
-
-from limites.limites import MAX1, MIN1
+from niveles.opciones import minimo, maximo
 from pedir_num import  solicitar_intento
 
-def adivina_numero(dato, minimo=MIN1, maximo=MAX1):
+def adivina_numero(dato, minimo=minimo, maximo=maximo):
     numero=random.randit(minimo, maximo)
     n_intentos=0
     while True:
@@ -27,7 +26,7 @@ def adivina_numero(dato, minimo=MIN1, maximo=MAX1):
         else: 
             Victoria=True
             break
-            
-    return   n_intentos
+
+    return   Victoria, minimo, maximo
      
             
