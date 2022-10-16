@@ -15,7 +15,9 @@ def jugar_partida(minimo, maximo):
             n_intentos= str(n_intentos)
             print("Has ganado")
             print("{}, has adivinado el número en {} intento/s!".format(usuario, n_intentos))
+            
             break
+    return usuario, n_intentos, minimo, maximo, victoria    
             
 
 def jugar(numero):
