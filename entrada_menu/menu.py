@@ -41,7 +41,7 @@ def opciones():
         MAX4=10**12 
         minimo=MIN
         maximo=MAX4  
-        intento_maximo=4
+        intento_maximo=25
         
     
     return minimo, maximo, intento_maximo
