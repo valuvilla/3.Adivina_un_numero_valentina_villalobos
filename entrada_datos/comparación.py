@@ -29,7 +29,7 @@ def adivina_numero():
             break
         
     if numero!=intento:
-        print("El numero pensado era {}".formar(numero))    
+        print("El numero pensado era {}".format(numero))    
 
 
     return   victoria, minimo, maximo, n_intentos
