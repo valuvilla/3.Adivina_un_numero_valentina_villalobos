@@ -2,15 +2,16 @@
 
 import random
 
-from niveles.opciones import minimo, maximo
+from niveles.entrada.menu import *
 from pedir_num import  solicitar_intento
 
-def adivina_numero(dato, minimo=minimo, maximo=maximo):
+def adivina_numero():
+    minimo, maximo = opciones()
     numero=random.randit(minimo, maximo)
     n_intentos=0
     while True:
         n_intentos+=1
-        intento=solicitar_intento(dato, minimo, maximo)
+        intento=solicitar_intento()
 
         if intento<numero:
             print("demasiado pequeño", "\n")
@@ -19,7 +20,7 @@ def adivina_numero(dato, minimo=minimo, maximo=maximo):
 
         elif intento>numero:
             print("demasiado grande", "\n")
-            maximo=intento+1
+            maximo=intento-1
             Victoria=False
 
                

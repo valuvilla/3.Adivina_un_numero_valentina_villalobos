@@ -1,18 +1,18 @@
 
-from comparacion import adivina_numero, numero, intento
-from main import usuario
-from niveles.opciones import opciones, minimo, maximo
-from pedirnumero.pedir_num import valor
-import siono
+from comparacion import *
+from niveles.opciones import *
+from pedirnumero.pedir_num import *
+from siono import desea_jugar
 
-def jugar_partida(minimo, maximo):
+
+def jugar_partida():
+    minimo, maximo = opciones()
     usuario=input("Usuario")
-    opciones(valor)
     while True:
-        victoria, minimo, maximo = adivina_numero(numero,minimo, maximo )
-        
+        victoria, minimo, maximo = adivina_numero()
+
         if victoria==True:
-            n_intentos= str(n_intentos)
+            n_intentos = str(n_intentos)
             print("Has ganado")
             print("{}, has adivinado el número en {} intento/s!".format(usuario, n_intentos))
             
@@ -20,12 +20,13 @@ def jugar_partida(minimo, maximo):
     return usuario, n_intentos, minimo, maximo, victoria    
             
 
-def jugar(numero):
+def jugar():
     while True:
-        jugar_partida(valor, numero, minimo, maximo)
-        if not siono("¿Desea volver a jugar?"):
-            print("Hasta pronto, {}!".format(usuario))
+        jugar_partida()
+        if not desea_jugar("¿Desea volver a jugar?"):
+            print("Hasta pronto")
             break
+
 
 
 

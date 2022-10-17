@@ -1,9 +1,8 @@
 import sys
 
-from niveles.opciones import minimo, maximo
+from niveles.opciones import *
 
-
-def pedir_numero(valor):
+def pedir_numero():
     while True:
         valor=input("Introduce un valor: ")
         try:
@@ -15,12 +14,13 @@ def pedir_numero(valor):
             sys.exit()
     return valor
 
-def solicitar_intento(valor, minimo, maximo):
+def solicitar_intento():
+    minimo, maximo = opciones()
     invitacion="Adivine un número"
     while True:
         invitacion= "{} entre {} y {} incluídos".format(invitacion, minimo, maximo)
         print(invitacion)
-        dato= pedir_numero(valor)
+        dato= pedir_numero()
         try:
             minimo<=dato<=maximo
         except:
@@ -31,5 +31,4 @@ def solicitar_intento(valor, minimo, maximo):
             sys.exit()
     
     return dato            
-            
-print(solicitar_intento(minimo, maximo)) 
+        
