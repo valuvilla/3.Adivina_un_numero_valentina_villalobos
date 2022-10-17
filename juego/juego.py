@@ -41,9 +41,9 @@ def jugar_partida():
     print(tabulate(tabla))       
     return  minimo, maximo, victoria    
             
-
+#Funcion principal
 def jugar():
-    while desea_jugar("Desea jugar: ")==True:
-        jugar_partida()
-    return "FIN DEL JUEGO"
+    while desea_jugar("Desea jugar: ")==True: #Bucle inifinito hasta que se quiera dejar de jugar
+        jugar_partida() #Llamamos a la segundo funcion principal
+    return "FIN DEL JUEGO"#Senal que de que se terminado el programa
 
