@@ -1,7 +1,7 @@
 def nivel2():
     MIN=0
-    MAX=1000
+    MAX2=1000
     minimo=MIN
-    maximo=MAX
-    intento_maximo=16
+    maximo=MAX2
+    intento_maximo=8
     return maximo, minimo, intento_maximo

@@ -1,30 +1,38 @@
 
-from entrada_datos import *
-from menu.menu import *
-from entrada_datos.pedir_num import *
-from entrada_datos.siono import *
+from tabulate import tabulate
+import pickle
 
-
+from entrada_datos.entrada import *
 
 def jugar_partida():
-    minimo, maximo = opciones()
-    usuario=input("Usuario")
+    usuario=input("Usuario: ")
+    tabla=[["Usuario","Intentos"]]
     while True:
-        victoria, minimo, maximo, n_intentos = adivina_numero()
+        victoria, minimo, maximo, n_intentos, intento_maximo = adivina_numero()
 
-        if victoria==True:
-            print("{}, has adivinado el número en {} intento/s!".format(usuario, n_intentos))
+        tabla.append([usuario, n_intentos])
+    
+
+        ArchivoBinario=open("ArchivoLista", "wb")
+
+        pickle.dump(tabla, ArchivoBinario)
+
+
+        ArchivoBinario.close()
+
+
+        
+
+
+
+        if n_intentos==intento_maximo or victoria==True:
             break
-    return usuario, n_intentos, minimo, maximo, victoria    
+    print(tabulate(tabla))       
+    return  minimo, maximo, victoria    
             
 
 def jugar():
-    while True:
+    while desea_jugar("Desea jugar: ")==True:
         jugar_partida()
-        if not desea_jugar("¿Desea volver a jugar?"):
-            print("Hasta pronto")
-            break
-
-
-
+    return "FIN DEL JUEGO"
 

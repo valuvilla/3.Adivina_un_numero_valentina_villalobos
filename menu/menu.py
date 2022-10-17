@@ -5,8 +5,6 @@ from nivel2 import nivel2
 from nivel3 import nivel3
 from nivel4 import nivel4
  
-
-
 def opciones():
     print(
         "Opción 1. Nivel 1",
@@ -15,18 +13,21 @@ def opciones():
         "Opción 4. Nivel 4"
     )
 
-    opcion=input("INTRODUZCA OPCIÓN")
+    opcion=input("INTRODUZCA OPCIÓN: ")
 
     if opcion=="1":
-        minimo, maximo=nivel1()
+        minimo, maximo, intento_maximo=nivel1()
+
+    elif opcion=="2":
+        minimo, maximo, intento_maximo=nivel2()
         
-    elif opcion==2:
-        minimo, maximo=nivel2()
+
+    elif opcion=="3":
+        minimo, maximo, intento_maximo=nivel3()
         
-    elif opcion==3:
-        minimo, maximo=nivel3()
          
     else:
-       minimo, maximo=nivel4()
-
-    return minimo, maximo
+        minimo, maximo, intento_maximo=nivel4()
+        
+    
+    return minimo, maximo, intento_maximo
