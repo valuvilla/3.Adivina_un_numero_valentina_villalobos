@@ -10,7 +10,7 @@ def opciones():
 
     opcion=input("INTRODUZCA OPCIÓN: ")
 
-    
+    #Dependiendo de la opcion elegida, variara el valor maximo del ramngo y el numero maximo de intentos
     if opcion=="1":
         MIN=0
         MAX1=100
