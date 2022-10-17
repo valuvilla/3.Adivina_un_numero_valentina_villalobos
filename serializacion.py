@@ -1,8 +1,8 @@
 import pickle
 
-from juego.juego import usuario, n_intentos
 datos=[]
-datos.append(usuario, n_intentos)
+
+datos.append(input(":"))
 
 ArchivoBinario=open("ArchivoLista", "wb")
 
