@@ -1,4 +1,4 @@
-
+#Funciones que nos permite determinar la dificultad de la actividad.
  
 def opciones():
     print(
@@ -24,7 +24,7 @@ def opciones():
         MAX2=1000
         minimo=MIN
         maximo=MAX2
-        intento_maximo=8
+        intento_maximo=15
         
 
     elif opcion=="3":
@@ -32,7 +32,8 @@ def opciones():
         MAX3=10**6
         minimo=MIN
         maximo=MAX3 
-        intento_maximo=6
+        intento_maximo=20
+
         
          
     else:

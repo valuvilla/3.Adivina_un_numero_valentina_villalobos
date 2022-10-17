@@ -1,12 +1,4 @@
-from tabulate import tabulate
 
-from juego.juego import usuario, n_intentos
-
-datos=[["Intentos", "Usuario"]]
-for i in range(3):
-    datos.append([usuario, n_intentos])
-
-print(tabulate(datos))
 
 import turtle
 
