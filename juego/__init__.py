@@ -1,4 +1,1 @@
-from .juego import(
-    jugar, 
-    jugar_partida
-)
+from juego.juego import*
