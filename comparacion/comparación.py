@@ -1,8 +1,9 @@
 
 
 import random
+from menu.menu import opciones
 
-from niveles.entrada.menu import *
+
 from pedir_num import  solicitar_intento
 
 def adivina_numero():
@@ -29,5 +30,6 @@ def adivina_numero():
             break
 
     return   Victoria, minimo, maximo
-     
-            
+    
+
+

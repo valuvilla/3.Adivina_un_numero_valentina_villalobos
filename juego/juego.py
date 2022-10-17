@@ -1,6 +1,6 @@
 
 from comparacion import *
-from niveles.opciones import *
+from menu.menu import *
 from pedirnumero.pedir_num import *
 from siono import desea_jugar
 

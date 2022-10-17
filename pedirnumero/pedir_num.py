@@ -1,6 +1,6 @@
 import sys
 
-from niveles.opciones import *
+from menu.menu import *
 
 def pedir_numero():
     while True:
@@ -24,7 +24,7 @@ def solicitar_intento():
         try:
             minimo<=dato<=maximo
         except:
-            print("{} no está entre {} y {}".format(dato,minimo,maximo ))
+            print("{} no está entre {} y {}".format(dato,minimo,maximo))
             pass
         else:
             break 
