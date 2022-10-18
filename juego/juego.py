@@ -3,7 +3,10 @@ from tabulate import tabulate
 #Para crear una lista de valores persistentes
 import pickle
 
-from entrada_datos.__init__ import *
+from entrada_datos import (
+    adivina_numero,
+    desea_jugar
+)
 
 #funcion responsable de cada juego
 def jugar_partida():

@@ -2,4 +2,9 @@
 Modulo de gestion de las funciones del paquete
 """
 
-from entrada_datos.entrada import *
+from .entrada import (
+    adivina_numero, 
+    pedir_numero,
+    solicitar_intento, 
+    desea_jugar
+)

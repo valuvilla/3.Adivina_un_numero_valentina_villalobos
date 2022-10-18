@@ -1,5 +1,7 @@
  
-from juego.juego import jugar
+from juego import (
+jugar
+)
 
 if __name__ == "__main__":
     jugar()

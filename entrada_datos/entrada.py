@@ -1,7 +1,9 @@
 import sys
 import random
 
-from entrada_menu.menu import *
+from entrada_menu import(
+    opciones
+)
 
 
 def adivina_numero():
